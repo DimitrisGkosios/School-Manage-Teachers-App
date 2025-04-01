@@ -6,8 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="schoolapp7-swing-soa-stage" />
+        <module name="School-App-Swing-Soa-Stage" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="schoolapp7-swing-soa-stage" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
