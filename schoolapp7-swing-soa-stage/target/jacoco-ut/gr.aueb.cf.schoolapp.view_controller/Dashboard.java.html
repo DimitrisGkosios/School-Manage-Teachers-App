@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="el"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Dashboard.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">schoolapp7-swing-soa-stage</a> &gt; <a href="index.source.html" class="el_package">gr.aueb.cf.schoolapp.view_controller</a> &gt; <span class="el_source">Dashboard.java</span></div><h1>Dashboard.java</h1><pre class="source lang-java linenums">package gr.aueb.cf.schoolapp.view_controller;
+
+import gr.aueb.cf.schoolapp.Main;
+
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.sql.Connection;
+import java.util.Objects;
+
+public class Dashboard extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private static Connection connection;
+	
+<span class="nc" id="L21">	public Dashboard() {</span>
+
+<span class="nc" id="L23">		setTitle(&quot;Ποιότητα στην Εκπαίδευση&quot;);</span>
+<span class="nc" id="L24">		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L25">		setBounds(100, 100, 759, 467);</span>
+<span class="nc" id="L26">		contentPane = new JPanel();</span>
+<span class="nc" id="L27">		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));</span>
+
+<span class="nc" id="L29">		setContentPane(contentPane);</span>
+<span class="nc" id="L30">		contentPane.setLayout(null);</span>
+		
+<span class="nc" id="L32">		JPanel header = new JPanel();</span>
+<span class="nc" id="L33">		header.setLayout(null);</span>
+<span class="nc" id="L34">		header.setBackground(new Color(0, 52, 117));</span>
+<span class="nc" id="L35">		header.setBounds(0, 0, 745, 52);</span>
+<span class="nc" id="L36">		contentPane.add(header);</span>
+		
+<span class="nc" id="L38">		JLabel govImage = new JLabel(&quot;&quot;);</span>
+<span class="nc" id="L39">		govImage.setIcon(new ImageIcon(Objects.requireNonNull(Dashboard.class.getResource(&quot;/images/gov_logo_small.png&quot;))));</span>
+<span class="nc" id="L40">		govImage.setBounds(0, 0, 100, 52);</span>
+<span class="nc" id="L41">		header.add(govImage);</span>
+		
+<span class="nc" id="L43">		JLabel firstLastName = new JLabel(&quot;ΓΚΟΣΙΟΣ ΔΗΜΗΤΡΙΟΣ&quot;);</span>
+<span class="nc" id="L44">		firstLastName.setForeground(new Color(255, 255, 255));</span>
+<span class="nc" id="L45">		firstLastName.setBounds(562, 11, 183, 30);</span>
+<span class="nc" id="L46">		header.add(firstLastName);</span>
+		
+<span class="nc" id="L48">		JPanel footer = new JPanel();</span>
+<span class="nc" id="L49">		footer.setLayout(null);</span>
+<span class="nc" id="L50">		footer.setBounds(3, 340, 742, 90);</span>
+<span class="nc" id="L51">		contentPane.add(footer);</span>
+		
+<span class="nc" id="L53">		JLabel lbl_manual = new JLabel(&quot;Εγχειρίδιο Χρήσης&quot;);</span>
+<span class="nc" id="L54">		lbl_manual.setForeground(new Color(0, 52, 117));</span>
+<span class="nc" id="L55">		lbl_manual.setBounds(123, 37, 151, 29);</span>
+<span class="nc" id="L56">		footer.add(lbl_manual);</span>
+		
+<span class="nc" id="L58">		JLabel lbl_oftenQuestions = new JLabel(&quot;Συχνές Ερωτήσεις&quot;);</span>
+<span class="nc" id="L59">		lbl_oftenQuestions.setForeground(new Color(0, 52, 117));</span>
+<span class="nc" id="L60">		lbl_oftenQuestions.setBounds(284, 37, 151, 29);</span>
+<span class="nc" id="L61">		footer.add(lbl_oftenQuestions);</span>
+		
+<span class="nc" id="L63">		JLabel lbl_support = new JLabel(&quot;Υποστήριξη Πολιτών&quot;);</span>
+<span class="nc" id="L64">		lbl_support.setForeground(new Color(0, 52, 117));</span>
+<span class="nc" id="L65">		lbl_support.setBounds(445, 37, 151, 29);</span>
+<span class="nc" id="L66">		footer.add(lbl_support);</span>
+		
+<span class="nc" id="L68">		JPanel leftPanel = new JPanel();</span>
+<span class="nc" id="L69">		leftPanel.setBackground(new Color(0, 52, 117));</span>
+<span class="nc" id="L70">		leftPanel.setBounds(0, 55, 178, 282);</span>
+<span class="nc" id="L71">		contentPane.add(leftPanel);</span>
+<span class="nc" id="L72">		leftPanel.setLayout(null);</span>
+		
+<span class="nc" id="L74">		JLabel lbl_home = new JLabel(&quot;Αρχική&quot;);</span>
+<span class="nc" id="L75">		lbl_home.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 12));</span>
+<span class="nc" id="L76">		lbl_home.setForeground(new Color(240, 240, 0));</span>
+<span class="nc" id="L77">		lbl_home.setBounds(10, 10, 85, 26);</span>
+<span class="nc" id="L78">		leftPanel.add(lbl_home);</span>
+		
+<span class="nc" id="L80">		JLabel lbl_teachers = new JLabel(&quot;Εκπαιδευτές&quot;);</span>
+<span class="nc" id="L81">		lbl_teachers.setForeground(Color.WHITE);</span>
+<span class="nc" id="L82">		lbl_teachers.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 12));</span>
+<span class="nc" id="L83">		lbl_teachers.setBounds(10, 35, 158, 26);</span>
+<span class="nc" id="L84">		leftPanel.add(lbl_teachers);</span>
+		
+<span class="nc" id="L86">		JLabel lbl_teachersView = new JLabel(&quot;Προβολή Εκπαιδευτών&quot;);</span>
+<span class="nc" id="L87">		lbl_teachersView.addMouseListener(new MouseAdapter() {</span>
+			@Override
+			public void mouseEntered(MouseEvent e) {
+<span class="nc" id="L90">				lbl_teachersView.setText(&quot;&lt;html&gt;&lt;font color='blue'&gt;Προβολή Εκπαιδευτών&lt;/font&gt;&lt;/html&gt;&quot;);</span>
+<span class="nc" id="L91">			}</span>
+			@Override
+			public void mouseExited(MouseEvent e) {
+<span class="nc" id="L94">				lbl_teachersView.setText(&quot;Προβολή Εκπαιδευτών&quot;);</span>
+<span class="nc" id="L95">			}</span>
+			@Override
+			public void mouseClicked(MouseEvent e) {
+<span class="nc" id="L98">				Main.getDashboard().setEnabled(true);</span>
+<span class="nc" id="L99">				Main.getViewTeachersPage().setVisible(true);</span>
+<span class="nc" id="L100">			}</span>
+		});
+<span class="nc" id="L102">		lbl_teachersView.setForeground(Color.WHITE);</span>
+<span class="nc" id="L103">		lbl_teachersView.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 12));</span>
+<span class="nc" id="L104">		lbl_teachersView.setBounds(15, 61, 153, 26);</span>
+<span class="nc" id="L105">		leftPanel.add(lbl_teachersView);</span>
+		
+<span class="nc" id="L107">		JLabel lbl_teacherInsert = new JLabel(&quot;Εισαγωγή Εκπαιδευτή&quot;);</span>
+<span class="nc" id="L108">		lbl_teacherInsert.addMouseListener(new MouseAdapter() {</span>
+			@Override
+			public void mouseEntered(MouseEvent e) {
+<span class="nc" id="L111">				lbl_teacherInsert.setText(&quot;&lt;html&gt;&lt;font color='blue'&gt;Εισαγωγή Εκπαιδευτή&lt;/font&gt;&lt;/html&gt;&quot;);</span>
+<span class="nc" id="L112">			}</span>
+			@Override
+			public void mouseExited(MouseEvent e) {
+<span class="nc" id="L115">				lbl_teacherInsert.setText(&quot;Εισαγωγή Εκπαιδευτή&quot;);</span>
+<span class="nc" id="L116">			}</span>
+			@Override
+			public void mouseClicked(MouseEvent e) {
+<span class="nc" id="L119">				Main.getDashboard().setEnabled(true);</span>
+<span class="nc" id="L120">				Main.getInsertTeacherPage().setVisible(true);</span>
+<span class="nc" id="L121">			}</span>
+		});
+<span class="nc" id="L123">		lbl_teacherInsert.setForeground(Color.WHITE);</span>
+<span class="nc" id="L124">		lbl_teacherInsert.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 12));</span>
+<span class="nc" id="L125">		lbl_teacherInsert.setBounds(15, 87, 153, 26);</span>
+<span class="nc" id="L126">		leftPanel.add(lbl_teacherInsert);</span>
+		
+<span class="nc" id="L128">		JSeparator line = new JSeparator();</span>
+<span class="nc" id="L129">		line.setBounds(3, 52, 759, 2);</span>
+<span class="nc" id="L130">		contentPane.add(line);</span>
+<span class="nc" id="L131">		line.setBackground(new Color(0, 0, 255));</span>
+		
+<span class="nc" id="L133">		JSeparator lineBottom = new JSeparator();</span>
+<span class="nc" id="L134">		lineBottom.setBackground(Color.BLUE);</span>
+<span class="nc" id="L135">		lineBottom.setBounds(0, 338, 759, 2);</span>
+<span class="nc" id="L136">		contentPane.add(lineBottom);</span>
+		
+<span class="nc" id="L138">		JLabel lbl_quality = new JLabel(&quot;Ποιότητα στην Εκπαίδευση&quot;);</span>
+<span class="nc" id="L139">		lbl_quality.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 22));</span>
+<span class="nc" id="L140">		lbl_quality.setBounds(293, 63, 310, 52);</span>
+<span class="nc" id="L141">		contentPane.add(lbl_quality);</span>
+		
+<span class="nc" id="L143">		JLabel lblNewLabel = new JLabel(&quot;Προβολή Μητρώου Εκπαιδευτών&quot;);</span>
+<span class="nc" id="L144">		lblNewLabel.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 12));</span>
+<span class="nc" id="L145">		lblNewLabel.setBounds(202, 129, 237, 38);</span>
+<span class="nc" id="L146">		contentPane.add(lblNewLabel);</span>
+		
+<span class="nc" id="L148">		JLabel lblNewLabel_1 = new JLabel(&quot;Προβολή Μητρώου Εγγεγραμμένων Εκπαιδευτών στο Μητρώο&quot;);</span>
+<span class="nc" id="L149">		lblNewLabel_1.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 12));</span>
+<span class="nc" id="L150">		lblNewLabel_1.setBounds(202, 148, 533, 38);</span>
+<span class="nc" id="L151">		contentPane.add(lblNewLabel_1);</span>
+		
+<span class="nc" id="L153">		JButton btnViewTeachers = new JButton(&quot;Συνέχεια&quot;);</span>
+<span class="nc" id="L154">		btnViewTeachers.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L156">				Main.getDashboard().setEnabled(true);</span>
+<span class="nc" id="L157">				Main.getViewTeachersPage().setVisible(true);</span>
+<span class="nc" id="L158">			}</span>
+		});
+<span class="nc" id="L160">		btnViewTeachers.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 12));</span>
+<span class="nc" id="L161">		btnViewTeachers.setForeground(new Color(255, 255, 255));</span>
+<span class="nc" id="L162">		btnViewTeachers.setBackground(new Color(0, 128, 64));</span>
+<span class="nc" id="L163">		btnViewTeachers.setBounds(202, 183, 94, 31);</span>
+<span class="nc" id="L164">		contentPane.add(btnViewTeachers);</span>
+		
+<span class="nc" id="L166">		JLabel lblNewLabel_2 = new JLabel(&quot;Εισαγωγή Εκπαιδευτή στο Μητρώο Εκπαιδευτών&quot;);</span>
+<span class="nc" id="L167">		lblNewLabel_2.setFont(new Font(&quot;Tahoma&quot;, Font.BOLD, 12));</span>
+<span class="nc" id="L168">		lblNewLabel_2.setBounds(202, 225, 359, 38);</span>
+<span class="nc" id="L169">		contentPane.add(lblNewLabel_2);</span>
+		
+<span class="nc" id="L171">		JLabel lblNewLabel_1_1 = new JLabel(&quot;Εισαγωγή Εκπαιδευτή στο Μητρώο&quot;);</span>
+<span class="nc" id="L172">		lblNewLabel_1_1.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 12));</span>
+<span class="nc" id="L173">		lblNewLabel_1_1.setBounds(202, 244, 533, 38);</span>
+<span class="nc" id="L174">		contentPane.add(lblNewLabel_1_1);</span>
+		
+<span class="nc" id="L176">		JButton btnInsertTeacher = new JButton(&quot;Συνέχεια&quot;);</span>
+<span class="nc" id="L177">		btnInsertTeacher.addActionListener(new ActionListener() {</span>
+			public void actionPerformed(ActionEvent e) {
+<span class="nc" id="L179">				Main.getDashboard().setEnabled(false);</span>
+<span class="nc" id="L180">				Main.getInsertTeacherPage().setVisible(true);</span>
+<span class="nc" id="L181">			}</span>
+		});
+<span class="nc" id="L183">		btnInsertTeacher.setForeground(Color.WHITE);</span>
+<span class="nc" id="L184">		btnInsertTeacher.setFont(new Font(&quot;Tahoma&quot;, Font.PLAIN, 12));</span>
+<span class="nc" id="L185">		btnInsertTeacher.setBackground(new Color(0, 128, 64));</span>
+<span class="nc" id="L186">		btnInsertTeacher.setBounds(202, 279, 94, 31);</span>
+<span class="nc" id="L187">		contentPane.add(btnInsertTeacher);</span>
+<span class="nc" id="L188">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

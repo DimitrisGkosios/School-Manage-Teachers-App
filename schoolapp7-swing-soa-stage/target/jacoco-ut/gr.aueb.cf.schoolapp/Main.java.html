@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="el"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">schoolapp7-swing-soa-stage</a> &gt; <a href="index.source.html" class="el_package">gr.aueb.cf.schoolapp</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package gr.aueb.cf.schoolapp;
+
+import gr.aueb.cf.schoolapp.view_controller.*;
+
+import java.awt.*;
+
+<span class="nc" id="L7">public class Main {</span>
+	
+<span class="nc" id="L9">	private final static LandingPage landingPage = new LandingPage();</span>
+<span class="nc" id="L10">	private final static LoginPage loginPage = new LoginPage();</span>
+<span class="nc" id="L11">	private final static Dashboard dashboard = new Dashboard();</span>
+<span class="nc" id="L12">	private final static InsertTeacherPage insertTeacherPage = new InsertTeacherPage();</span>
+<span class="nc" id="L13">	private final static ViewTeachersPage viewTeachersPage = new ViewTeachersPage();</span>
+<span class="nc" id="L14">	private final static UpdateTeacherPage updateTeacherPage = new UpdateTeacherPage();</span>
+<span class="nc" id="L15">	private final static TeacherView teacherView = new TeacherView();</span>
+<span class="nc" id="L16">	private final static InsertSuccessPage insertSuccessPage = new InsertSuccessPage();</span>
+<span class="nc" id="L17">	private final static UpdateSuccessPage updateSuccessPage = new UpdateSuccessPage();</span>
+	
+	public static void main(String[] args) {
+
+<span class="nc" id="L21">		EventQueue.invokeLater(() -&gt; {</span>
+            try {
+<span class="nc" id="L23">                landingPage.setVisible(true);</span>
+<span class="nc" id="L24">                landingPage.setLocationRelativeTo(null);</span>
+
+<span class="nc" id="L26">                loginPage.setVisible(false);</span>
+<span class="nc" id="L27">                loginPage.setLocationRelativeTo(null);</span>
+
+<span class="nc" id="L29">                dashboard.setVisible(false);</span>
+<span class="nc" id="L30">                dashboard.setLocationRelativeTo(null);</span>
+
+<span class="nc" id="L32">                insertTeacherPage.setVisible(false);</span>
+<span class="nc" id="L33">                insertTeacherPage.setLocationRelativeTo(null);</span>
+
+<span class="nc" id="L35">                viewTeachersPage.setVisible(false);</span>
+<span class="nc" id="L36">                viewTeachersPage.setLocationRelativeTo(null);</span>
+
+<span class="nc" id="L38">				teacherView.setVisible(false);</span>
+<span class="nc" id="L39">				teacherView.setLocationRelativeTo(null);</span>
+
+<span class="nc" id="L41">				updateTeacherPage.setVisible(false);</span>
+<span class="nc" id="L42">				updateTeacherPage.setLocationRelativeTo(null);</span>
+
+<span class="nc" id="L44">				insertSuccessPage.setVisible(false);</span>
+<span class="nc" id="L45">				insertSuccessPage.setLocationRelativeTo(null);</span>
+
+<span class="nc" id="L47">				updateSuccessPage.setVisible(false);</span>
+<span class="nc" id="L48">				updateSuccessPage.setLocationRelativeTo(null);</span>
+<span class="nc" id="L49">            } catch (Exception e) {</span>
+                //e.printStackTrace();
+<span class="nc" id="L51">            }</span>
+<span class="nc" id="L52">        });</span>
+<span class="nc" id="L53">	}</span>
+
+	public static LandingPage getLandingPage() {
+<span class="nc" id="L56">		return landingPage;</span>
+	}
+
+	public static LoginPage getLoginPage() {
+<span class="nc" id="L60">		return loginPage;</span>
+	}
+
+	public static Dashboard getDashboard() {
+<span class="nc" id="L64">		return dashboard;</span>
+	}
+
+	public static InsertTeacherPage getInsertTeacherPage() {
+<span class="nc" id="L68">		return insertTeacherPage;</span>
+	}
+
+	public static ViewTeachersPage getViewTeachersPage() {
+<span class="nc" id="L72">		return viewTeachersPage;</span>
+	}
+
+	public static UpdateTeacherPage getUpdateTeacherPage() {
+<span class="nc" id="L76">		return updateTeacherPage;</span>
+	}
+
+	public static TeacherView getTeacherView() {
+<span class="nc" id="L80">		return teacherView;</span>
+	}
+
+	public static InsertSuccessPage getInsertSuccessPage() {
+<span class="nc" id="L84">		return insertSuccessPage;</span>
+	}
+
+	public static UpdateSuccessPage getUpdateSuccessPage() {
+<span class="nc" id="L88">		return updateSuccessPage;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
