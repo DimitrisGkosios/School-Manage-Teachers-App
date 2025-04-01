@@ -1,0 +1,58 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.util,DBUtil,5,28,2,0,2,10,2,2,1,2
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.dao,CityDAOImpl,51,0,2,0,17,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.dao,TeacherDAOImpl,261,382,6,6,48,83,6,9,2,7
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.exceptions,TeacherNotFoundException,0,4,0,0,0,2,0,1,0,1
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.exceptions,TeacherAlreadyExistsException,4,0,0,0,2,0,1,0,1,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp,Main,118,0,0,0,42,0,13,0,13,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.dao.util,DBHelper,5,77,0,6,3,22,0,5,0,2
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.mapper,Mapper,0,90,0,2,0,10,0,4,0,3
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.service,TeacherServiceImpl,55,106,5,5,18,29,5,8,1,7
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.service,CityServiceImpl,13,0,0,0,6,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.dao.exceptions,TeacherDAOException,4,0,0,0,2,0,1,0,1,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.authentication,AuthenticationManager,13,0,4,0,1,0,3,0,1,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.validator,TeacherValidator,56,0,12,0,10,0,7,0,1,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,ViewTeachersPage,678,0,2,0,117,0,6,0,5,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,TeacherView.new WindowAdapter() {...},27,0,0,0,8,0,3,0,3,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,TeacherView.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,LandingPage,346,0,0,0,62,0,1,0,1,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,InsertSuccessPage,237,0,0,0,43,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,LoginPage,247,0,0,0,44,0,1,0,1,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,Dashboard.new MouseAdapter() {...},26,0,0,0,8,0,4,0,4,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,Dashboard.new MouseAdapter() {...},26,0,0,0,8,0,4,0,4,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,Dashboard.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,Dashboard.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,Dashboard,596,0,0,0,107,0,1,0,1,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,InsertSuccessPage.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,TeacherView,798,0,4,0,149,0,5,0,3,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,UpdateSuccessPage.new ActionListener() {...},19,0,0,0,6,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,UpdateTeacherPage,1069,0,6,0,194,0,7,0,4,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,LandingPage.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,ViewTeachersPage.new ActionListener() {...},42,0,2,0,11,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,LandingPage.new ItemListener() {...},23,0,2,0,5,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,ViewTeachersPage.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,UpdateTeacherPage.new ActionListener() {...},77,0,2,0,19,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,ViewTeachersPage.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,UpdateTeacherPage.new FocusAdapter() {...},23,0,2,0,4,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,ViewTeachersPage.new ActionListener() {...},15,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,UpdateTeacherPage.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,ViewTeachersPage.new ActionListener() {...},10,0,0,0,3,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,UpdateTeacherPage.new WindowAdapter() {...},47,0,0,0,10,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,ViewTeachersPage.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,UpdateTeacherPage.new FocusAdapter() {...},24,0,2,0,4,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,ViewTeachersPage.new ListSelectionListener() {...},29,0,4,0,6,0,4,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,InsertTeacherPage.new FocusAdapter() {...},23,0,2,0,4,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,InsertTeacherPage.new ActionListener() {...},69,0,2,0,18,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,InsertTeacherPage.new WindowAdapter() {...},26,0,0,0,6,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,InsertTeacherPage,1009,0,2,0,182,0,4,0,3,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,InsertTeacherPage.new FocusAdapter() {...},23,0,2,0,4,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,InsertTeacherPage.new ActionListener() {...},13,0,0,0,4,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,LoginPage.new ActionListener() {...},39,0,2,0,8,0,3,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,ViewTeachersPage.new WindowAdapter() {...},10,0,0,0,3,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.view_controller,UpdateSuccessPage,237,0,0,0,43,0,2,0,2,0
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.dto,BaseTeacherDTO,65,63,0,0,22,22,12,11,12,11
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.dto,TeacherInsertDTO,3,13,0,0,1,2,1,1,1,1
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.dto,TeacherUpdateDTO,13,19,0,0,6,4,3,2,3,2
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.dto,TeacherReadOnlyDTO,23,19,0,0,9,4,6,1,6,1
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.model,Teacher,80,96,0,0,25,35,14,17,14,17
+schoolapp7-swing-soa-stage,gr.aueb.cf.schoolapp.model,City,29,0,0,0,12,0,7,0,7,0

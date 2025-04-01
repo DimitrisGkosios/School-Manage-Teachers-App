@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="el"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DBHelper.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">schoolapp7-swing-soa-stage</a> &gt; <a href="index.source.html" class="el_package">gr.aueb.cf.schoolapp.dao.util</a> &gt; <span class="el_source">DBHelper.java</span></div><h1>DBHelper.java</h1><pre class="source lang-java linenums">package gr.aueb.cf.schoolapp.dao.util;
+
+import gr.aueb.cf.schoolapp.util.DBUtil;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DBHelper {
+
+    /**
+     * No instances of this class should be available.
+     */
+    private DBHelper() {
+
+    }
+
+    public static void eraseData() throws SQLException {
+<span class="fc" id="L22">        String sqlFKOff = &quot;SET @@foreign_key_checks = 0&quot;;</span>
+<span class="fc" id="L23">        String sqlFKOn = &quot;SET @@foreign_key_checks = 1&quot;;</span>
+<span class="fc" id="L24">        String sqlSelect = &quot;SELECT TABLE_NAME FROM information_schema.tables WHERE TABLE_SCHEMA = 'schooldb7staging'&quot;;</span>
+<span class="fc" id="L25">        ResultSet rs = null;</span>
+
+<span class="fc" id="L27">        try (Connection connection = DBUtil.getConnection();</span>
+<span class="fc" id="L28">             PreparedStatement ps1 = connection.prepareStatement(sqlFKOff);</span>
+<span class="fc" id="L29">             PreparedStatement ps2 = connection.prepareStatement(sqlSelect)) {</span>
+<span class="fc" id="L30">            ps1.executeUpdate();</span>
+<span class="fc" id="L31">            rs = ps2.executeQuery();</span>
+<span class="fc" id="L32">            List&lt;String&gt; tables = mapRsToList(rs);</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            for (String nameTable : tables) {</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">                if (!nameTable.equals(&quot;cities&quot;)) {</span>
+<span class="fc" id="L35">                    connection.prepareStatement(&quot;DELETE FROM &quot; + nameTable).executeUpdate();</span>
+<span class="fc" id="L36">                    connection.prepareStatement(&quot;ALTER TABLE &quot; + nameTable + &quot; AUTO_INCREMENT=1&quot;).executeUpdate();</span>
+                }
+<span class="fc" id="L38">            }</span>
+<span class="fc" id="L39">            connection.prepareStatement(sqlFKOn).executeUpdate();</span>
+<span class="nc" id="L40">        } catch (SQLException e) {</span>
+<span class="nc" id="L41">            e.printStackTrace();</span>
+<span class="nc" id="L42">            throw e;</span>
+<span class="fc" id="L43">        }</span>
+<span class="fc" id="L44">    }</span>
+
+    private static List&lt;String&gt; mapRsToList(ResultSet rs) throws SQLException {
+<span class="fc" id="L47">        List&lt;String&gt; tables = new ArrayList&lt;&gt;();</span>
+
+<span class="fc bfc" id="L49" title="All 2 branches covered.">        while (rs.next()) {</span>
+<span class="fc" id="L50">            tables.add(rs.getString(&quot;TABLE_NAME&quot;));</span>
+        }
+<span class="fc" id="L52">        return tables;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
